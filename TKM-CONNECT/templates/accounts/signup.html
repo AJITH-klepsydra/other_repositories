@@ -1,0 +1,33 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <link rel="icon" href="{%static 'home/icon.png'%}" type="image/gif" sizes="16x16">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{%static 'accounts/style2.css'%}">
+</head>
+<body>
+  <div class="login-page">
+  <div class="form">
+    <form class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="email address"/>
+     
+    </form>
+    <form class="login-form" method="POST" action="">
+    {%csrf_token%}
+  
+    <b>Are You a TKM alumni?</b><br><i>(We will be verifying you later)<br></i>
+      {{form}}
+      <button  type="submit">Signup</button>
+      <p class="message">Already registered? <a href="{%url 'login'%}">Login to TKM-CONNECT</a></p>
+    </form>
+ 
+  </div>
+</div>
+<script type="text/javascript" src="{%static 'accounts/script1.js'%}"></script>
+</body>
+</html>

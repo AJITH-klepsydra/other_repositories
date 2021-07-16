@@ -1,0 +1,264 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TKM connect</title>
+  <link rel="icon" href="{%static 'home/icon.png'%}" type="image/gif" sizes="16x16">
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+  
+  <!-- Vendor CSS Files -->
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Template Main CSS File -->
+  <link href="{%static 'home/style.css'%}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Butterfly - v2.1.0
+  * Template URL: https://bootstrapmade.com/butterfly-free-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <a href="#" class="logo mr-auto"><img src="{%static 'home/logo.png'%}" alt="" class="img-fluid"></a>
+      <!-- Uncomment below if you prefer to use text as a logo -->
+      <!-- <h1 class="logo mr-auto"><a href="index.html">Butterfly</a></h1> -->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+        {%if request.user.is_alumni%}
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="{%url 'submit'%}">Job Post</a></li>
+          <li><a href="{%url 'add-blogs'%}">Blog Post</a></li>
+          <li><a href="{%url 'chat'%}">Community</a></li>
+          
+          <li><a href="{%url 'profile' request.user.id%}">Profile</a></li>
+          <li><a href="{%url 'logout' %}">Logout</a></li>
+          {%endif%}
+          {%if not request.user.is_alumni%}
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="{%url 'submit'%}">Search</a></li>
+          <li><a href="{%url 'chat'%}">Queries</a></li>
+          <li><a href="{%url 'profile' request.user.id%}">Profile</a></li>
+          <li><a href="{%url 'logout' %}">Logout</a></li>
+          {%endif%}
+         
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1>TKM Connect</h1>
+          {%if not request.user.is_alumni%}
+          <h2>"There are admirable potentialities in every human being. Believe in your strength and your youth. Learn to repeat endlessly to yourself, ‘It all depends on me." </h2>
+          {%endif%}
+          {%if request.user.is_alumni%}
+          <h2>“There is no exercise better for the heart than reaching down and lifting people up.” </h2>
+          {%endif%}
+          <div><a href="#about" class="btn-get-started scrollto">Get Started</a></div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img">
+          {%if request.user.is_alumni%}
+          <img src="{%static 'home/hero-img.png'%}" class="img-fluid" alt="">
+          {%endif%}
+           {%if not request.user.is_alumni%}
+          <img src="{%static 'home/hero_st.svg'%}" class="img-fluid" alt="">
+          {%endif%}
+        	
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 d-flex justify-content-center video-box align-items-stretch" style="background: url('https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80')">
+            <a href="https://www.youtube.com/watch?v=U1r6jrLm1bQ" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+          </div>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3>Hestia is on the way</h3>
+            <p>Hestia is an international conference for scholars addressing sociopolitical issues from interdisciplinary standpoints. We invite presenters to apply good ideas, whether new or old, to issues facing contemporary society. We are proud to hold our inaugural conference in the historic city of Kyoto. For full details, please visit our website at sociohex.com.</p>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <h4 class="title"><a href="">Tech events</a></h4>
+              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="">Dj night</a></h4>
+              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-atom"></i></div>
+              <h4 class="title"><a href="">Cultural events</a></h4>
+              <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+ 
+ {%if not request.user.is_alumni%}
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Job opportunites</h2>
+          <p>You can view all open positions find jobs/internships that suit your specific career interests.</p>
+        </div>
+
+        <div class="row">
+       
+        {%for job in jobs%}
+          <div class="col-lg-4 col-md-6 job" style="background: url('{{job.image}}');background-size:cover;border-radius: 20px;">
+            <div class="icon-box" style="  height: 350px;overflow-y: scroll;opacity: 0.8" >
+              <div class="icon"><i class="las la-basketball-ball" style="color: #ff689b;"></i></div>
+              <h4 class="title">{{job.title}}</h4>
+              <p class="description">{{job.description}}</p>
+              <form method="POST" action="">
+              	{%csrf_token%}
+              	<input type="hidden" name="alumni"value="{{job.alumni.username}}">
+                 <input type="hidden" name="title"value="{{job.title}}">
+              <button type="submit" class="btn btn-success">Apply</button>
+              </form>
+              <br><i style="color:black">Posted by : {{job.alumni.username}}</i>
+            </div>
+        </div>
+     {%endfor%}
+       
+
+          
+
+      </div>
+    </section><!-- End Services Section -->
+   
+{%endif%}
+
+<a name="#requests">
+ {%if  request.user.is_alumni%}
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Received job requests</h2>
+          <p>Responses to your previous Job applications</p>
+        </div>
+
+        <div class="row">
+       
+        {%for rec in requests%}
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box"  style="background: url('{{job.image}}');">
+              <div class="icon"><i class="las la-basketball-ball" style="color: #ff689b;"></i></div>
+              <h4 class="title">{{rec.job.title}}</h4>
+              <p class="description">{{rec.user}}</p>
+              <a href="{%url 'profile' rec.user.id%}"><button type="submit" class="btn btn-success">Check him out</button></a>
+
+          
+            </div>
+        </div>
+     {%endfor%}
+       
+
+          
+
+      </div>
+    </section><!-- End Services Section -->
+   
+{%endif%}
+</a>
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Blogs</h2>
+          <p>Some thoughts</p>
+        </div>
+
+        <div class="row">
+{%for blog in blogs%}
+
+             <div class="col-lg-6 mx-auto">
+
+                <!-- CUSTOM BLOCKQUOTE -->
+                <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded">
+                    <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-quote-left text-white"></i></div>
+                    <p class="mb-0 mt-2 font-italic">{{blog.description}}<a href="#" class="text-info">@{{blog.author.username}}</a></p>
+                   <a href="{{blog.link}}"> <footer class="blockquote-footer pt-4 mt-4 border-top">know more!!
+                        <cite title="Source Title"> on {{blog.title}}</cite>
+                    </footer></a>
+                </blockquote><!-- END -->
+
+    
+            </div>
+{%endfor%}
+
+
+
+       
+
+          
+
+      </div>
+    </section><!-- End Services Section -->
+   
+
+  
+
+  
+
+    
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Coding Crew</h3>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+	<title>The Tkm Tribe</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="{%static 'css/main.css'%}">
+<!--===============================================================================================-->
+</head>
+<body>
+<style media="screen">
+
+	input[type=password], input[type=email],input[type=number],input[type=text]{
+	  background-color: #f6f6f6;
+	  border: none;
+	  color: #0d0d0d;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 5px;
+	  width: 85%;
+	  border: 2px solid #f6f6f6;
+	  -webkit-transition: all 0.5s ease-in-out;
+	  -moz-transition: all 0.5s ease-in-out;
+	  -ms-transition: all 0.5s ease-in-out;
+	  -o-transition: all 0.5s ease-in-out;
+	  transition: all 0.5s ease-in-out;
+	  -webkit-border-radius: 5px 5px 5px 5px;
+	  border-radius: 5px 5px 5px 5px;
+	}
+
+</style>
+
+	<div class="wrapper fadeInDown">
+	  <div id="formContent">
+	    <!-- Tabs Titles -->
+
+	    <h2 lass="inactive underlineHover" > <a href="{%url 'login'%}" style="text-decoration:none;">Sign In</a> </h2>
+	    <h2 class="active">Sign Up </h2>
+
+	    <!-- Icon -->
+
+
+	    <!-- Login Form -->
+
+	    <form action='' method='post'>
+				{% csrf_token %}
+				<div style="display:none;">
+				{{form.profile_icon}}
+				</div>
+				<div onclick="change()"id='image' class='img' alt="user image"style="width:6rem;height:6rem;border-radius:50%;align:center; display: block; margin-left: auto;margin-right: auto;margin-top:10px;"></div>
+				<img src="{%static 'images/icons/icon_change.png'%}" onclick="change()"style="height:40px;width:40px;align:center; display: block; margin-left: auto;margin-right: auto;">
+
+			<p style="color:white;width:6rem;border-radius:50%;align:center; display: block; margin-left: auto;margin-right: auto;"></>click to change</p>
+<font color="grey">
+				User Name:
+				{{form.username}}<br>
+				Email Id:
+					{{form.email}}<br>
+        Password:
+					{{form.password1}}<br>
+        Confirm Password:
+					{{form.password2}}<br>
+				telegram Chat ID:
+					{{form.telegram_chat_id}}<br>
+				<p>We can send you Notifications through telegram , click the below button to get your chat id </p><a href='https://telegram.me/TkmTribe_bot'><img style="height:3rem;width:3rem;"src='https://cdn3.iconfinder.com/data/icons/popular-services-brands-vol-2/512/telegram-512.png'/a>
+					<input type="submit" name="action"class="fadeIn fourth" value="Signup">
+			</form>
+
+	    <!-- Remind Passowrd -->
+	    <div id="formFooter">
+				{% if form.errors %}
+			{% for field in form %}
+			{% for error in field.errors %}
+				<p> {{ error }} </p>
+				{% endfor %}
+				{% endfor %}
+				{% endif %}</div>
+	    </div>
+
+	  </div>
+	</div>
+
+
+
+
+	<script type="text/javascript">
+
+		ls=['https://avatarfiles.alphacoders.com/699/thumb-69905.png',
+		'https://i.pinimg.com/236x/a1/4d/d1/a14dd10c68a962d2a52bdba9e78a4811--marvel-dc-marvel-comics.jpg',
+		'https://www.freepngimg.com/thumb/cartoon/94262-art-spiderman-character-fictional-deadpool-technology-thumb.png',
+		'https://image.myanimelist.net/ui/kvW-ZKVqtlVlpFs6Iopx4zNV88zmNAGwDNMBPNVU546Yz_f9ALNshxjHYb4SNHwHM1Dk8OSyKy9E_cl5fKry1x09Wehr5JVULaFEji09BuoJiUKUFrhiebbBIqEOE2fwi6TGJEOYpaRh7MD1wUT1_aZ_CqoMHsclMXKwcsKeXcc',
+		'https://cutewallpaper.org/21/anime-guy-profile-pic/kawacys-Profile-Picture-Anime-profile-Anime-oc-True-art.jpg',
+		'https://66.media.tumblr.com/315c6220e081d4ecdf31830ed30e541f/tumblr_pomg7bjm5d1wt7dae_400.png',
+		'https://i.pinimg.com/564x/44/2a/a7/442aa7d0f3fae9156905c546b642a63a.jpg',
+		'https://avatarfiles.alphacoders.com/832/thumb-83296.png',
+		'https://trendsinusa.com/wp-content/uploads/2018/01/cool-anime-profile-pictures-50422-300x300.jpg',
+		'https://cdn.myanimelist.net/s/common/uploaded_files/1450422629-282d8f0067ee312c3731eb112ce57703.jpeg',
+		'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/93389a85-d35c-4425-9c7a-3308f95d3d96/d9j81b5-3c54a460-3728-4918-b160-7f8f393de0ed.png/v1/fill/w_200,h_200,q_80,strp/anime_boy_by_randy7878_d9j81b5-fullview.jpg',
+	'https://assets.dragoart.com/images/15543_500/l-o_5e4cb1453833a2.12457232_71552_5_2.png',
+		'https://i.pinimg.com/600x315/3e/bc/11/3ebc11070484d998b008429a6576529c.jpg',
+			'https://avatarfiles.alphacoders.com/209/thumb-209118.jpg',
+			'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSznb60dBeSCkT9YOl8LzSua2XCUduYCwnXx8IzfwpgYxr3xYF8&usqp=CAU',
+		'https://www.freeiconspng.com/uploads/avengers-icon-15.png',
+		'https://wheninmanila.blob.core.windows.net/wheninmanilabucket/2019/07/bucky-barnes-mcu-200x200.jpg',
+	'https://i.pinimg.com/474x/05/82/3a/05823a7a44a141ab815aa8f5bc040c51.jpg',
+	'https://www.techieshelp.com/wp-content/uploads/2014/06/linux-logo.png',];
+		id=ls[Math.floor(Math.random()*19)]
+		document.getElementById('id_profile_icon').value=id;
+		document.getElementById('image').innerHTML="<img style='width=6rem;height:6rem;border-radius:50%;'src='"+id+"'>'";
+		function change(){
+			id=ls[Math.floor(Math.random()*11)]
+			document.getElementById('id_profile_icon').value=id;
+			document.getElementById('image').innerHTML="<img style='width=6rem;height:6rem;border-radius:50%;'src='"+id+"'>'";
+		}
+	</script>
+</body>
+</html>

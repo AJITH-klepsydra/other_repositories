@@ -1,0 +1,121 @@
+  <!DOCTYPE html>
+  {%load static%}
+  <html lang="en">
+  <head>
+  	<title>Upload Your Meme</title>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--===============================================================================================-->
+  	<link rel="icon" type="image/png" href="{%static 'images/icons/favicon.ico'%}"/>
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+  <!--===============================================================================================-->
+
+  		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+  <!--===============================================================================================-->
+  	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+  <!--===============================================================================================-->
+  	<link rel="stylesheet" type="text/css" href="{% static 'fonts/iconic/css/material-design-iconic-font.min.css'%}">
+  <!--===============================================================================================-->
+  	<link rel="stylesheet" type="text/css" href="{%static 'vendor/animate/animate.css'%}">
+  <!--===============================================================================================-->
+  	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css'%}">
+  <!--===============================================================================================-->
+  	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css'%}">
+  <!--===============================================================================================-->
+  	<link rel="stylesheet" type="text/css" href="{%static 'vendor/select2/select2.min.css'%}">
+  <!--===============================================================================================-->
+  	<link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css'%}">
+  <!--===============================================================================================-->
+  	<link rel="stylesheet" type="text/css" href="{%static 'css/util.css'%}">
+  	<link rel="stylesheet" type="text/css" href="{%static 'css/main.css'%}">
+  <!--===============================================================================================-->
+  </head>
+  <body>
+
+
+  	<div class="container-login100" style="background-image: url({% static 'images/bg02.jpg'%});>"
+  		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+
+
+  			<form class="login100-form validate-form" action='' method='post' enctype="multipart/form-data" >
+  				{% csrf_token %}
+  				<span class="login100-form-title p-b-37">
+            <font color=white>
+  					Upload Your Meme
+          </font>
+  				</span>
+  <div class ='main_block'>
+  				<div class="wrap-input100 validate-input m-b-20" >
+  					<input class="input100" type="text" name="auth_name" placeholder="Author ">
+  					<span class="focus-input100"></span>
+  				</div>
+
+          <div class="wrap-input100 validate-input m-b-20" >
+  					<input class="input100" type="text" name="hub_name" placeholder="Company name ">
+          </div>
+
+          <div class="wrap-input100 validate-input m-b-20" >
+            <input class="input100" type="text" name="meme_caption" placeholder="Caption ">
+            <span class="focus-input100"></span>
+          </div>
+
+          <div class="login100-form-btn" >
+        <input class="upload1" type="file" name="document" value="Select the file"><br>
+      </div><br>
+  				<div class="container-login100-form-btn">
+            <style media="screen">
+              .subm_button{
+                background: green;
+                width:10rem;
+                height: 2.5rem;
+                color:white;
+                border-radius: 20%;
+              }
+              .subm_button:hover{
+                background: yellow;
+                color:red;
+              }
+            </style>
+  					<button class="subm_button" type="submit" name="action">
+  						Submit
+  					</button>
+  				</div>
+
+          <div class="container-login100-form-btn">
+
+
+
+          </div>
+          <br>
+          <b>Due to storage issues We will remove your meme after a certain period of time...  : )</b>
+
+  			</form>
+
+
+
+
+
+
+
+
+  	<div id="dropDownSelect1"></div>
+
+  <!--===============================================================================================-->
+  	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js'%}"></script>
+  <!--===============================================================================================-->
+
+  <!--===============================================================================================-->
+  	<script src="{%static 'vendor/bootstrap/js/popper.js'%}"></script>
+  	<script src="{%static 'vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+  <!--===============================================================================================-->
+  	<script src="{%static 'vendor/select2/select2.min.js'%}"></script>
+  <!--===============================================================================================-->
+  	<script src="{%static 'vendor/daterangepicker/moment.min.js'%}"></script>
+  	<script src="{%static 'vendor/daterangepicker/daterangepicker.js'%}"></script>
+  <!--===============================================================================================-->
+  	<script src="{%static 'vendor/countdowntime/countdowntime.js'%}"></script>
+  <!--===============================================================================================-->
+  	<script src="{%static 'js/main.js'%}"></script>
+
+  </body>
+  </html>

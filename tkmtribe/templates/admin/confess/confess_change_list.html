@@ -1,0 +1,15 @@
+{%extends 'admin/change_list.html'%}
+
+{%block object-tools%}
+<form id="update" action="{%url 'change_claps'%}"  method="post">
+{%csrf_token%}
+<b>A little Klep HAck</b>
+<input name="change_it" type="text"  class="vTextField">
+<button type="submit" name="button" class="button">change</button>
+<br>
+
+</form>
+
+</form>
+{{block.super}}
+{%endblock object-tools%}

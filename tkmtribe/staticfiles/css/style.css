@@ -1,0 +1,94 @@
+
+.About{
+  color:white;
+  font-size: 4vw;
+}
+.About:hover{
+  text-decoration: none;
+
+}
+.heading{
+  margin-top: 5vw;
+  margin-bottom: 1vw;
+
+}
+@media only screen and (min-width: 460px) {
+.About{
+    color:white;
+    font-size: 2vw;
+  }
+}
+
+@media only screen and (min-width: 680px) {
+.About{
+    color:white;
+    font-size: 1vw;
+  }
+  .heading{
+    font-size: 5vw;
+  }
+  .btn{
+    width:100px;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .heading{
+    font-size: 5vw;
+    margin-left: 3vw;
+  }
+}
+
+.list-group-item{
+
+}
+.btn{
+  margin-left: 0vw;
+  border-radius: 1vw;
+
+}
+.form-control{
+  margin-top: 1vw;
+}
+.navbar{
+  background-color: #333333;
+
+}
+.com_head{
+  text-decoration: bold;
+  margin-top: 2vw;
+}
+
+.cont {
+  margin-left:2vw;
+  margin-top: 0;
+  margin-right: 2vw;
+}
+.navbar{
+  margin: 0;
+
+}
+.subhead{
+  font-size: 1vw;
+  cplor:grey;
+  opacity: 20%;
+}
+.user{
+  padding-left: 6vw;
+  color: white;
+}
+.main_block{
+  margin-left: 30vw;
+  padding-top: 2vw;
+  width:40vw
+}
+@media only screen and (max-width: 500px) {
+  .main_block{
+    margin-left: 10vw;
+    padding-top: 2vw;
+    width:70vw
+  }
+  .navbar-brand{
+  font-size: 10vw;
+}
+
+}

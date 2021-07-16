@@ -1,0 +1,175 @@
+@media only screen and (max-width: 600px) {
+  .main_container{
+  	
+  }
+  .banner{
+
+  	width: 25vw;
+  	margin-left:75vw ;
+ 
+  }
+  .banner img{
+  	width: 40px;
+  	height: 40px;
+  	padding: 0px;
+  }
+  .banner p{
+  	font-size: 10px;
+  	padding-top: 5px;
+  }
+	.stats{
+		width: 100%;
+		padding: 0px;
+	}
+	.the_list p{
+		font-size: 5px;
+		}
+		.generate{
+			right: 30px;
+			padding: 5px;
+		}
+	#loginScreen input{
+		width: 65vw;
+		height: 5vh;
+		margin-left: 8vw;}
+	.shops{
+		width:70%;
+		padding: 10px;
+	}
+	.card  img {
+	width: 30vw;}
+	.title{
+		padding: 5px;
+	}
+
+	.offer h1{
+		font-size: 20px;
+	}
+	.offer b{
+		font-size: 10px;
+	}
+	#offer_list {
+		width: 100%;
+	}
+	.offer{
+		margin: 5px;
+	}
+
+
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  .banner p{
+  	font-size: 15px;
+  	padding-top: 5px;
+  }
+	.stats{
+		width: 100%;
+		padding: 0px;
+	}
+	.stats{
+	width: 70%;
+	margin-top:25px;
+	display: flex;
+	flex-direction: row;
+	padding-left:20px;
+
+	}
+	.the_list p{
+	font-size: 15px;
+
+
+}
+
+}
+
+@media only screen and (max-width: 1100px) {
+  .banner{
+
+  	width: 25vw;
+  	margin-left:75vw ;
+
+  }
+	.stats{
+	width: 80%;
+	margin-top:25px;
+	display: flex;
+	flex-direction: row;
+	
+
+	}
+	.card_div{
+	margin-top: 0;
+	margin-left: 10px;
+	width: 50%;
+	background-color: white;
+	border: 1px solid #FFFFFF;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 7px;
+	padding: 10px;
+
+
+
+}
+	.card-text p{
+	font-size: 17px;
+	line-height: 23px;
+	color: rgba(0, 0, 0, 0.7);
+
+}
+	.card-text b{
+	font-size: 25px;
+	color: black;
+	padding:0px;
+	margin: 0px;
+}
+	.status-text{
+	font-size: 15px;
+	padding-left: 2%;
+	color: rgba(0, 0, 0, 0.7);
+	padding-top: 2%;
+
+}
+}
+
+@media only screen and (max-width: 500px) {
+
+  .banner p{
+  	font-size: 12px;
+  	padding-top: 5px;
+  }
+
+	.stats{
+	width: 90%;
+	margin-top:25px;
+
+
+	}
+	.the_list p{
+	font-size: 15px;
+
+
+}
+.card-text p{
+	font-size: 13px;
+}
+.card-text b{
+	font-size: 20px;
+}
+.first_row img{
+	width: 25px;
+}
+.status-text{
+	font-size: 15px;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.the_list p{
+		font-size: 13px;
+
+
+}
+
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+	<title>Login V9</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{%static 'images/icons/favicon.ico'%}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/iconic/css/material-design-iconic-font.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'vendor/animate/animate.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'vendor/select2/select2.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'css/util.css'%}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/main.css'%}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-login100" style="background-image: url({% static 'images/bg-01.jpg'%});>"
+		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+			<form class="login100-form validate-form" action='' method='post' >
+				{% csrf_token %}
+				<span class="login100-form-title p-b-37">
+					Sign Up
+				</span>
+<div class ='main_block'>
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter username or email">
+					User name: {{form.username}}
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
+
+					Email Id: {{form.email}}
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
+
+					Password: {{form.password1}}
+					<span class="focus-input100"></span>
+				</div>
+				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter password">
+
+					Confirm Password: {{form.password2}}
+					<span class="focus-input100"></span>
+				</div>
+
+
+				<div class="container-login100-form-btn">
+					<button class="login100-form-btn" type="submit" name="action">
+						Sign Up
+					</button>
+				</div>
+
+			</form>
+
+
+
+
+				<div class="text-center">
+					<a href="{%url 'login'%}" class="txt2 hov1">
+						Sign in
+					</a>
+				</div>
+			</form>
+
+
+		</div>
+	</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1">
+		{% if form.errors %}
+	{% for field in form %}
+	{% for error in field.errors %}
+		<p> {{ error }} </p>
+		{% endfor %}
+		{% endfor %}
+		{% endif %}</div>
+
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js'%}"></script>
+<!--===============================================================================================-->
+
+<!--===============================================================================================-->
+	<script src="{%static 'vendor/bootstrap/js/popper.js'%}"></script>
+	<script src="{%static 'vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'vendor/select2/select2.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'vendor/daterangepicker/moment.min.js'%}"></script>
+	<script src="{%static 'vendor/daterangepicker/daterangepicker.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'vendor/countdowntime/countdowntime.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'js/main.js'%}"></script>
+
+</body>
+</html>

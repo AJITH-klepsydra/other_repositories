@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="app">
+    <file>Wall (265).jpg</file>
+    <file>mainbg.png</file>
+    <file>,ainic.png</file>
+    <file>logo_evee.png</file>
+    <file>log_og.png</file>
+    <file>log_og.png</file>
+  </qresource>
+</RCC>

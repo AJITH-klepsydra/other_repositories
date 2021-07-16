@@ -1,0 +1,104 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-color:  #8C6373;
+}
+.About1{
+	margin-right: 0vw;
+	background: #9C9C9C;
+	border-radius: 20%;
+	text-decoration: none;
+	align-self: flex-end;
+}
+.About{
+	margin-left: 0vw;
+	background: #9C9C9C;
+	border-radius: 20%;
+		text-decoration: none;
+}
+.About1:hover{
+	margin-right: 0vw;
+	background: #747474
+	border-radius: 20%;
+	text-decoration: none;
+	align-self: flex-end;
+}
+.About:hover{
+	margin-left: 0vw;
+	background: #9C9C9C;
+	border-radius: 20%;
+		text-decoration: none;
+}
+div>h1{
+	text-align: left;
+	font-family: 'Dancing Script', cursive;
+	color:   white ;
+	font-size: 3rem;
+	padding-top: 20px;
+	margin-top: 10px;
+
+}
+
+.heading{
+
+	 color:white;
+	 margin-top: 10px;
+	 font-family: 'Dancing Script', cursive;
+}
+
+#footer{
+	width: 100%;
+	padding: 0 0 20px 0;
+	background-color:  #5a5b5b;
+	color: #fff;
+	text-align: center;
+	opacity: 80%
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  opacity: 100%;
+}
+.navbar1{
+	background: #522641;
+}
+.navbar{
+	background: #ED6A40 50%;
+
+#footer #sadman{
+	font-family: 'Permanent Marker', cursive;
+}
+.cont {
+  margin-left:2vw;
+  margin-top: 0;
+  margin-right: 2vw;
+}
+@media only screen and (max-width: 680px) {
+
+	.heading{
+		font-size: 1.5rem;
+		opacity: 70%;
+	}
+	.nb{
+			font-size: 1rem;
+			opacity: 40%;
+			padding-bottom: 2vw;
+
+
+	}
+.navbar1{
+	background: #7F7F7F;
+}
+.navbar{
+	background: #D4D4D4 50%;
+}
+}
+.subm_button{
+	background: green;
+	border-radius: 20%;
+}

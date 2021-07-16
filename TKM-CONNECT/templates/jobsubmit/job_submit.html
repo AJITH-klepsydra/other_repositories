@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block Links%}
+<link rel="stylesheet" type="text/css" href="{%static 'forms/style2.css'%}">
+<link rel="icon" href="{%static 'home/icon.png'%}" type="image/gif" sizes="16x16">
+{%endblock Links%}
+{%block Title%}Your Title{%endblock Title%}
+{%block Content%}
+<style type="text/css">
+	ul{
+		list-style: none;
+		font-size: 10px;
+		color: grey;
+	}
+</style>
+<h1>
+  <div class="login-page">
+  <div class="form">
+    <form class="login-form" method="POST" action="">
+    {%csrf_token%}
+      {{form}}
+      <button  type="submit">Post</button>
+    </form>
+  </div>
+</div>
+</h1>
+{%endblock Content%}
